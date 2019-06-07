@@ -2,6 +2,15 @@
 
 .home {
 
+  max-width: 800px;
+  width: 100%;
+
+  @media (max-width: 500px) {
+    max-width: 500px;
+    width: 100%;
+    background: red;
+  }
+
   .intro {
 
     h2 {
@@ -11,8 +20,7 @@
     p {
       padding:0 15px;
     }
-  
-  }
+  }  
 
   .space-images {
     display: flex;
@@ -24,9 +32,13 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      
+      @media @phone {
+        display: none;
+      }
     }
-  }
-
+  } 
+  
   .visit-planets {
     padding: 15px;
 
@@ -46,6 +58,10 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -59,8 +75,7 @@
 
       .btn {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        .center-items();
         border: 1px solid black;
         width: 100px;
         height: 35px;
@@ -73,12 +88,16 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
-    }
-  }
-}// home
+    } 
+  }  
+}
