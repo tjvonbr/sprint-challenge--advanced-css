@@ -242,7 +242,7 @@ p {
 }
 @media (max-width: 500px) {
   .home .walk {
-    flex-direction: column-reverse;
+    background: red;
   }
 }
 .home .walk .walk-text {
